@@ -1,26 +1,50 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react';
+import './Card.css';
 
 interface Props {
-  children: ReactNode | ReactNode[]
-  className?: string 
+  children: ReactNode | ReactNode[];
+  className?: string;
+  style?: React.CSSProperties;
+  backgroundColor?: string;
+  borderRadius?: string;
+  padding?: string;
+  shadow?: string;
+  hoverShadow?: string;
+  border?: string;
+  transitionDuration?: string;
 }
 
-const Card: FC<Props> = ({ children, className = '' }) => {
+const Card: FC<Props> = ({
+  children,
+  className = '',
+  style = {},
+  backgroundColor,
+  borderRadius,
+  padding,
+  shadow,
+  hoverShadow,
+  border,
+  transitionDuration,
+}) => {
+  const customStyles = {
+    '--card-bg-color': backgroundColor,
+    '--card-border-radius': borderRadius,
+    '--card-padding': padding,
+    '--card-shadow': shadow,
+    '--card-hover-shadow': hoverShadow,
+    '--card-border': border,
+    '--card-transition-duration': transitionDuration,
+    ...style,
+  } as React.CSSProperties;
+
   return (
-    <div id="card" className={`
-      bg-gray-200
-      rounded-xl
-      shadow-[0_8px_30px_rgb(0,0,0,0.12)]
-      p-6
-      border border-gray-100
-      hover:shadow-[0_8px_30px_rgb(0,0,0,0.16)]
-      transition-shadow
-      duration-300
-      ${className}
-    `}>
+    <div
+      className={`custom-card ${className}`}
+      style={customStyles}
+    >
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

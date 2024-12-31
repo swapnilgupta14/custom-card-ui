@@ -1,0 +1,12 @@
+.custom-card {
+  background-color: var(--card-bg-color, #e5e7eb);
+  border-radius: var(--card-border-radius, 0.75rem);
+  box-shadow: var(--card-shadow, 0 8px 30px rgb(0, 0, 0, 0.12));
+  padding: var(--card-padding, 1.5rem);
+  border: var(--card-border, 1px solid #f3f4f6);
+  transition: box-shadow var(--card-transition-duration, 300ms);
+}
+
+.custom-card:hover {
+  box-shadow: var(--card-hover-shadow, 0 8px 30px rgb(0, 0, 0, 0.16));
+}
