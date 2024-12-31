@@ -1,22 +1,27 @@
 {
   "name": "custom-card-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the custom card ui component",
   "license": "MIT",
   "author": "Swapnil Gupta",
   "type": "commonjs",
-  "keywords": [""],
+  "keywords": [
+    ""
+  ],
   "main": "dist/cjs/index.js",
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url":"https://github.com/swapnilgupta14/custom-card-ui"
+    "url": "git+https://github.com/swapnilgupta14/custom-card-ui.git"
   },
   "types": "dist/index.d.ts",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
