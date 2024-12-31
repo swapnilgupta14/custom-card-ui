@@ -7,8 +7,8 @@ interface Props {
 
 const Card: FC<Props> = ({ children, className = '' }) => {
   return (
-    <div className={`
-      bg-white
+    <div id="card" className={`
+      bg-gray-200
       rounded-xl
       shadow-[0_8px_30px_rgb(0,0,0,0.12)]
       p-6
